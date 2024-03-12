@@ -1,18 +1,25 @@
 body {
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 hr {
     width: 108%;
-    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0 20px 0;
 }
 
 :root {
     --primary: #F0F2F5;
     --secondary: #0866FF;
-    --tertiary: #36A420;
+    --tertiary: #46a832;
     --fundo: #fff;
     --hover1: #287afd;
+    --hover2: #429331;
+    --borda: #b3afafa4;
 }
 
 .container {
@@ -34,6 +41,7 @@ hr {
     justify-content: center;
     border-radius: 10px;
     background-color: var(--fundo);
+    box-shadow: -5px 5px 5px var(--borda);
 }
 
 .caixa input {
@@ -44,10 +52,11 @@ hr {
     margin-bottom: 15px;
     width: 100%;
     border-radius: 8px;
-    border-color: var(--primary);
+    border: 1px solid var(--borda);
+    outline: none;
 }
 
-.caixa input:active {
+.caixa input:focus {
     border-color: var(--secondary);
 }
 
@@ -58,9 +67,10 @@ hr {
     font-weight: bold;
     font-size: 16px;
     padding: 12px;
-    width: 109%;
+    width: 108%;
     box-sizing: border-box;
     border-radius: 8px;
+    color: var(--fundo);
 }
 
 .caixa #botao1:hover {
@@ -80,6 +90,13 @@ hr {
     box-sizing: border-box;
     border-radius: 8px;
     margin: auto;
+    color: var(--fundo);
+}
+
+.caixa #botao2:hover {
+    background-color: var(--hover2);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
 
 .caixa a {
@@ -88,4 +105,27 @@ hr {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    text-decoration: none;
+}
+
+
+/* RODAPÉ */
+
+#rodape {
+    width: 345px;
+    height: 100px;
+    position: absolute;
+    bottom: 18px;
+}
+
+/* LOGO */
+
+#logo {
+    width: 345px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 42%;
+    font-size: 25px;
+    color: var(--secondary);
 }
