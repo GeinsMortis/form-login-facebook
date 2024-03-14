@@ -115,7 +115,7 @@ hr {
     width: 345px;
     height: 100px;
     position: absolute;
-    bottom: 18px;
+    bottom: 40px;
 }
 
 /* LOGO */
@@ -124,8 +124,24 @@ hr {
     width: 345px;
     height: 100px;
     position: absolute;
-    top: 10px;
+    top: 37px;
     left: 42%;
     font-size: 25px;
     color: var(--secondary);
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+
+    #logo {
+        position: fixed; /* Altera a posição do logo */
+        top: 6%;
+        left: 29%;
+    }
+
+    #rodape {
+        position: fixed; /* Altera a posição do rodapé */
+        bottom: 40px;
+        right: 48px;
+    }
 }
